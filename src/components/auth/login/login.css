@@ -1,0 +1,439 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#30142b, #a12727);
+}
+
+.main-container {
+  display: flex;
+  align-self: center;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.header-message {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #f68e44;
+  font-size: 12px;
+}
+
+.error-message {
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.login-box form button {
+  background: none;
+  border: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #b79726;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 30px;
+  letter-spacing: 4px;
+}
+
+.login-box button:hover {
+  background: #f49803;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f4c803, 0 0 25px #bd9d0b, 0 0 50px #f4e403,
+    0 0 100px #d5cf1e;
+}
+
+.login-box button span {
+  position: absolute;
+  display: block;
+}
+
+.login-box button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f4c003);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #f4bc03);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #f4dc03);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #f4b003);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.footer-message {
+  color: rgb(107, 76, 28);
+  font-size: 14px;
+  text-align: center;
+}
+
+.register {
+  text-decoration: none;
+  color: #ce840d;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.google-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}
+
+.google-div {
+  margin-right: 0.5rem;
+  margin-bottom: 0.625rem;
+  border-bottom-width: 2px;
+  width: 100%;
+}
+
+.or-text {
+  color: rgb(107, 76, 28);
+  width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.or-div {
+  margin-left: 0.5rem;
+  margin-bottom: 0.625rem;
+  border-bottom-width: 2px;
+  width: 100%;
+}
+
+.google-button {
+  background-color: #ec9292;
+  margin-top: 15px;
+  margin-left: 60px;
+  display: flex;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  column-gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.svg-google {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/*çalışan css*/
+
+/* .main-container {
+  display: flex;
+  align-self: center;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+}
+
+.main-div {
+  padding: 1rem;
+  margin-top: 1.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  width: 24rem;
+  color: #4b5563;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.text-div {
+  text-align: center;
+}
+
+.div-two {
+  margin-top: 0.5rem;
+}
+
+.header-message {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.email-header {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.form-element {
+  margin-top: 1.25rem;
+}
+
+.email-input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  outline-style: none;
+  width: 100%;
+  color: #6b7280;
+  background-color: transparent;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-duration: 300ms;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.password-header {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.password-input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  outline-style: none;
+  width: 100%;
+  color: #6b7280;
+  background-color: transparent;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-duration: 300ms;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.error-message {
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.submit-button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+  :hover {
+    background-color: #4338ca;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.footer-message {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.google-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}
+
+.google-div {
+  margin-right: 0.5rem;
+  margin-bottom: 0.625rem;
+  border-bottom-width: 2px;
+  width: 100%;
+}
+
+.or-text {
+  width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.or-div {
+  margin-left: 0.5rem;
+  margin-bottom: 0.625rem;
+  border-bottom-width: 2px;
+  width: 100%;
+}
+
+.google-button {
+  display: flex;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  column-gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.svg-google {
+  width: 1.25rem;
+  height: 1.25rem;
+} */

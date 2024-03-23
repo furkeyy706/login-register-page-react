@@ -1,0 +1,36 @@
+.nav-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  flex-direction: row;
+  column-gap: 0.5rem;
+  align-items: center;
+  place-content: center;
+  border-bottom-width: 1px;
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(#30142b, #a12727);
+}
+
+.logout-button {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.login-button {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.register-button {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #2563eb;
+  text-decoration: underline;
+}
